@@ -1,0 +1,19 @@
+!!! XML
+!!! Strict
+%html
+  %head
+    %title test
+    %meta{:content => 'text/html', :charset => 'utf-8'}
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => 'stylesheet.css'}
+  %body
+    %p Rack ENV
+    %table
+      %tr
+        %th Variable
+        %th Value
+      %tr
+      - @env.each do |k, v|
+        %tr
+          %td= k
+          %td= v
+
